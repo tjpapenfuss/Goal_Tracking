@@ -5,8 +5,8 @@
 pl.view.editGoals = {
   setupUserInterface: function () {
     var formEl = document.forms['Goal'],
-      saveButton = document.forms['Goal'].commit,
-      selectGoalEl = document.forms['Goal'].selectGoal;
+      saveButton = formEl.commit,
+      selectGoalEl = formEl.selectGoal;
     var key="", keys=[], goal=null, optionEl=null, i=0;
 
     Goal.loadAll();
@@ -23,13 +23,13 @@ pl.view.editGoals = {
 
     selectGoalEl.addEventListener("change", function () {
       var goal=null, key = selectGoalEl.value;
-      console.log("Key value:" + key + Goal.instances[key].name.value);
+      console.log("Key value:" + key );
       if (key) {
         goal = Goal.instances[key];
         formEl.personID.value = goal.personID;
         formEl.name.value = goal.name;
         formEl.goal_des.value = goal.goal_des;
-        formEl.completed.value = goal.value;
+        formEl.completed.value = goal.completed;
       } else {
         formEl.reset();
       }

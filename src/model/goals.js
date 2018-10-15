@@ -72,9 +72,9 @@ Goal.saveAll = function() {
  * Test data.
  */
 Goal.createTestData = function () {
-  Goal.instances["0000"] = new Goal({personID:0000, name:"Jim", goal_des:"Sample Goal #1", completed:true});
-  Goal.instances["0001"] = new Goal({personID:0001, name:"Jim", goal_des:"Sample Goal #2", completed:true});
-  Goal.instances["0002"] = new Goal({personID:0002, name:"Jim", goal_des:"Sample Goal #3", completed:false});
+  Goal.instances[0] = new Goal({personID:0000, name:"Jim", goal_des:"Sample Goal #1", completed:true});
+  Goal.instances[1] = new Goal({personID:0001, name:"Jim", goal_des:"Sample Goal #2", completed:true});
+  Goal.instances[2] = new Goal({personID:0002, name:"Jim", goal_des:"Sample Goal #3", completed:false});
   Goal.saveAll();
 }
 
