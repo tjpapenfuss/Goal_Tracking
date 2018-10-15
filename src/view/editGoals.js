@@ -1,5 +1,6 @@
 /**
  * Methods to edit a Goal
+ * @author: Tanner Papenfuss
  */
 pl.view.editGoals = {
   setupUserInterface: function () {
